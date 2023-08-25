@@ -1,0 +1,67 @@
+@import url(https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #000000;
+  --color-secondary: #757575;
+
+  --color-text: #cecece;
+  --color-border: #fff;
+
+  --color-success: #88c459;
+  --color-error: #f5414f;
+  --color-warning: #ffd137;
+
+  /* set base values */
+  --fs-default: 1em;
+  --fs-scale: 1.2;
+
+  /* type scale */
+  --fs-xs: calc(1em / (var(--fs-scale) * var(--fs-scale)));
+  --fs-sm: calc(1em / var(--fs-scale));
+  --fs-md: calc(1em * var(--fs-scale));
+  --fs-lg: calc(1em * var(--fs-scale) * var(--fs-scale));
+  --fs-xl: calc(1em * var(--fs-scale) * var(--fs-scale) * var(--fs-scale));
+  --fs-xxl: calc(1em * var(--fs-scale) * var(--fs-scale) * var(--fs-scale) * var(--fs-scale));
+  --fs-xxxl: calc(1em * var(--fs-scale) * var(--fs-scale) * var(--fs-scale) * var(--fs-scale) * var(--fs-scale));
+
+  --fw-regular: 400;
+  --fw-bold: 500; 
+  --fw-more-bold: 700; 
+}
+
+*,
+*::before,
+*::after{
+  margin: 0;
+  font:inherit
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  color: var(--color-text);
+}
+
+body {
+  font-family: "DM Sans";
+  font-size: var(--fs-default);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+svg,
+img {
+  display: block;
+  max-width: 100%;
+}
