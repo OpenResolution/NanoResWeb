@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Link from "next/link";
+import Head from 'next/head';
 
 interface BlockProps {
   className: string;
@@ -19,6 +20,13 @@ function CenterContentBlock(props: BlockProps) {
 export default function Home(): JSX.Element {
   return (
     <div className="w-screen min-h-screen bg-gray-950">
+      <Head>
+        <title>NanoRes</title>
+        <meta
+          name="description"
+          content="Official website of NanoRes LLC."
+        />
+      </Head>
       <Navigation />
       <main>
         <CenterContentBlock className="aspect-[21/9] bg-hero">
