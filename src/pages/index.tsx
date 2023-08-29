@@ -26,6 +26,7 @@ export default function Home(): JSX.Element {
           name="description"
           content="Official website of NanoRes LLC."
         />
+        <meta name="google-site-verification" content="nsu4VTfYbLqjO65lF_YpbxlD_VpEVWXrOKjnHjMNJQE" />
       </Head>
       <Navigation />
       <main>
