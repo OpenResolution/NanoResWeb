@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Link from "next/link";
+import Image from "next/image";
 import Head from 'next/head';
 
 interface BlockProps {
@@ -28,7 +29,22 @@ export default function Home(): JSX.Element {
         />
         <meta name="google-site-verification" content="nsu4VTfYbLqjO65lF_YpbxlD_VpEVWXrOKjnHjMNJQE" />
       </Head>
-      <Navigation />
+
+      <div className="flex items-center fixed top-0 left-0 w-full z-50 bg-black">
+        <Link
+          className="flex align items-center justify-center text-4xl"
+          href="/"
+        >
+          <Image src="/logo.png" alt="SMLM Logo" width={100} height={100} />
+        </Link>
+        <Navigation />
+        <div className="p-4 flex align items-center justify-center">
+          <div className="border-2 px-[1em] py-[0.5em]">
+            <Link href="/panel"> Panel </Link>
+          </div>
+        </div>
+      </div>
+
       <main>
         <CenterContentBlock className="aspect-[21/9] bg-hero">
           <div className="text-4xl">
