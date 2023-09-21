@@ -1,14 +1,14 @@
 import React from 'react';
 import type { MenuProps } from 'antd';
 import { Menu } from 'antd';
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Navigation() {
   const items: MenuProps['items'] = [
     {
       label: (
-        <a href="/" target="_blank" rel="noopener noreferrer">
-          Products
-        </a>
+        <Link href="/"> Products </Link>
       ),
       key: 'products',
       children: [
@@ -20,9 +20,7 @@ export default function Navigation() {
     },
     {
       label: (
-        <a href="/" target="_blank" rel="noopener noreferrer">
-          Technology
-        </a>
+        <Link href="/"> Technology </Link>
       ),
       key: 'technology',
       children: [
@@ -42,17 +40,13 @@ export default function Navigation() {
     },
     {
       label: (
-        <a href="/" target="_blank" rel="noopener noreferrer">
-          Exhibition
-        </a>
+        <Link href="/"> Exhibition </Link>
       ),
       key: 'exhibition',
     },
     {
       label: (
-        <a href="/" target="_blank" rel="noopener noreferrer">
-          Tutorials
-        </a>
+        <Link href="/"> Tutorials </Link>
       ),
       key: 'tutorials',
       children: [
@@ -72,35 +66,31 @@ export default function Navigation() {
     },
     {
       label: (
-        <a href="/" target="_blank" rel="noopener noreferrer">
-          Company
-        </a>
+        <Link href="/company_info"> Company </Link>
       ),
       key: 'company',
       children: [
         {
-          label: 'About Us',
+          label: <Link href="/company_info#company_about_us"> About Us </Link>,
           key: 'about_us'
         },
         {
-          label: 'Patent',
+          label: <Link href="/company_info#company_patent"> Patent </Link>,
           key: 'patent'
         },
         {
-          label: 'People',
+          label: <Link href="/company_info#company_people"> People </Link>,
           key: 'people'
         },
         {
-          label: 'Contact Us',
+          label: <Link href="/company_info#company_contact_us"> Contact Us </Link>,
           key: 'contact_us'
         },
       ]
     },
     {
       label: (
-        <a href="/" target="_blank" rel="noopener noreferrer">
-          Program
-        </a>
+        <Link href="/"> Program </Link>
       ),
       key: 'program',
       children: [
@@ -123,7 +113,20 @@ export default function Navigation() {
     setCurrent(e.key);
   };
 
-  return <Menu className="w-full bg-black text-lg" theme='dark' onClick={onClick}
-    selectedKeys={[current]} mode="horizontal" items={items} />;
+  return <div className="flex items-center fixed top-0 left-0 w-full z-50 bg-black">
+    <Link
+      className="flex align items-center justify-center text-4xl"
+      href="/"
+    >
+      <Image src="/logo.png" alt="SMLM Logo" width={100} height={100} />
+    </Link>
+    <Menu className="w-full bg-black text-lg" theme='dark' onClick={onClick}
+      selectedKeys={[current]} mode="horizontal" items={items} />
 
+    <div className="p-4 flex align items-center justify-center">
+      <div className="border-2 px-[1em] py-[0.5em]">
+        <Link href="/panel"> Panel </Link>
+      </div>
+    </div>
+  </div>
 };
