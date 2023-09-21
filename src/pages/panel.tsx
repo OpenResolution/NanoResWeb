@@ -58,22 +58,24 @@ function Panel(): JSX.Element {
   };
 
   return (
-    <div className="min-h-screen">
+    <div>
       <Navigation />
-      <Tabs 
-        value={currentTab} 
-        onChange={handleTabChange} 
-        centered
-      >
-        {tabs.map(({ label }) => (
-          <Tab key={label} label={label} />
+      <div className="mt-28">
+        <Tabs
+          value={currentTab}
+          onChange={handleTabChange}
+          centered
+        >
+          {tabs.map(({ label }) => (
+            <Tab key={label} label={label} />
+          ))}
+        </Tabs>
+        {tabs.map(({ content }, idx) => (
+          <TabPanel key={idx} value={currentTab} index={idx}>
+            {content()}
+          </TabPanel>
         ))}
-      </Tabs>
-      {tabs.map(({ content }, idx) => (
-        <TabPanel key={idx} value={currentTab} index={idx}>
-          {content()}
-        </TabPanel>
-      ))}
+      </div>
     </div>
   );
 }
