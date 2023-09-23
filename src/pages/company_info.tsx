@@ -6,7 +6,7 @@ const AboutPage: React.FC = () => {
     return (
         <div>
             <Navigation />
-            <br id='company_about_us'/>
+            <br id='company_about_us' />
             <br />
             <br />
             <br />
@@ -29,7 +29,7 @@ const AboutPage: React.FC = () => {
                     </p>
                 </div>
 
-                <br id='company_patent'/>
+                <br id='company_patent' />
                 <br />
                 <br />
                 <br />
@@ -55,7 +55,7 @@ const AboutPage: React.FC = () => {
                     </ul>
                 </div>
 
-                <br id='company_people'/>
+                <br id='company_people' />
                 <br />
                 <br />
                 <br />
@@ -88,9 +88,49 @@ const AboutPage: React.FC = () => {
                             University of Science and Technology of China in 2018.
                         </div>
                     </div>
+
+                    <p className='font-bold mt-8 mb-2'>Junwei Zhou, M.S., Co-founder</p>
+                    <div className='flex flex-row items-center'>
+                        <div className="basis-1/6">
+                            <Image src="/junwei_zhou.png" alt="Junwei Zhou" width={200} height={200} />
+                        </div>
+                        <div className="basis-5/6 pl-12 pr-12">
+                            Junwei obtained his Master&apos;s degree in Computer Science from University of Michigan,
+                            Ann Arbor in 2023, and obtained his Bachelor&apos;s degree in Computer Science and Geophysics
+                            in 2021. He has interned at Amazon and Mechsoft as a software engineer before.
+                        </div>
+                    </div>
+
+                    <p className='font-bold mt-8 mb-2'>Shengzhi Wu, M.S. Candidate, Co-founder</p>
+                    <div className='flex flex-row items-center'>
+                        <div className="basis-1/6">
+                            <Image src="/shengzhi_wu.png" alt="Shengzhi Wu" width={200} height={200} />
+                        </div>
+                        <div className="basis-5/6 pl-12 pr-12">
+                            Shengzhi Wu is a Master Candidate (expects to graduate in June 2024) at National University of
+                            Singapore in Faculty of Science. Shengzhi Wu earned his B.S. in Mathematics at University of
+                            Science and Technology of China in 2021. He is experienced in scientific computation, medical
+                            image reconstruction, visualization and web development.
+                        </div>
+                    </div>
+
+                    <p className='font-bold mt-8 mb-2'>Rongkang Xiong, M.S. Candidate, Chief Software Architect</p>
+                    <div className='flex flex-row items-center'>
+                        <div className="basis-1/6">
+                            <Image src="/rongkang_xiong.jpg" alt="Rongkang Xiong" width={200} height={200} />
+                        </div>
+                        <div className="basis-5/6 pl-12 pr-12">
+                            Rongkang Xiong is a Master&apos;s student at the School of Big Data at the University of
+                            Science and Technology of China (expected to graduate in May 2025). He obtained his
+                            Bachelor&apos;s degree in Physics from the University of Science and Technology of China
+                            in 2021. Rongkang has previously served as the head of the Intelligent Customer Service
+                            Department at Anhui Province Bidding Group - Youzhicai Company. He is also a co-founder
+                            of chatpaper.org and dataten.ai Technology.
+                        </div>
+                    </div>
                 </div>
-                
-                <br id='company_contact_us'/>
+
+                <br id='company_contact_us' />
                 <br />
                 <br />
                 <br />
