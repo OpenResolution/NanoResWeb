@@ -53,7 +53,7 @@ function CreateTaskModal({ closeModal }: CreateTaskModalProps) {
           fileNameSuggestions && fileNameSuggestions.map((file) => file.s3Key)
         }
         inputDisplayValue={getFileName}
-        defaultValue={fileNameSuggestions && fileNameSuggestions[0].s3Key}
+        defaultValue={fileNameSuggestions.length ? fileNameSuggestions[0].s3Key : ""}
         inputOnChange={(event) => setFileNameInput(event.target.value)}
         optionDisplayValue={getFileName}
       />}
